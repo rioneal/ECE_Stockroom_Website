@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>ECE Stockroom - Login</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style>
+      /* "Please Login" title */
+      h1{
+        padding-top: 			25px;
+        text-align: 			center;
+      }
+      /* Page background */
+      body{
+        background: 			#eeeeee;
+      }
+      /* Login button */
+      .btn{
+        background: 			white;
+        color: 					black;
+        width: 					100%;
+      }
+
+      .reg-btn{
+      	background:				#cc0000;
+      	text-decoration-color: 	#000000 !important;
+      	width: 					50%;
+      	border-radius: 			5px;
+      	box-shadow: 			0 5px 12px rgba(0, 0, 0, 0.74);
+      }
+
+      /* Form for email, password, checkbox, button   */
+      .form-signin{
+        padding: 5px;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, .74);
+      }
+      /* Contains form-signin (email, password, checkbox, button) & 
+         helps form resize appropriately */  
+      .container{
+        border-radius: 5px;
+        background: #eeeeee;
+      }
+    </style>
+  </head>
+  
+  
+  <body>
+      <h1>Temporary Add Equipment</h1>
+      <div class="container">
+      <div class="col-sm-offset-4 col-sm-4">
+      <form class="form-signin" method="post">
+      
+	  <br>
+      <text>Entry</text>
+      <br>
+      <input type="value" id="equip_entry" class="form-control" name="equip_entry" placeholder="Entry" required>
+
+      <br>
+	  
+      <br>
+      <text>Description</text>
+      <br>
+      <input type="text" id="equip_description" class="form-control" name="equip_description" placeholder="Description" required>
+
+      
+      <button class="btn btn-lg btn-primary" type="submit">Add</button>
+      </form>
+
+  </div>
+  </div>
+  </body>
