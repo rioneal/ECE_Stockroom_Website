@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>ECE Stockroom - Budget Request</title>
+    <title>ECE Stockroom - Management</title>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
@@ -17,20 +17,32 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <!-- CSS Style Sheet File for Entire Web Page -->
+    <link href="../../css/style.css" rel="stylesheet">
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- CSS Style Sheet File for Entire Web Page -->
-    <link href="../../css/style.css" rel="stylesheet">
+
+
+  <style>
+  .table-responsive{
+    background: #e8f9ea;
+  }
+
+  .orders_navigation_container{
+    background: #e8edf4;
+  }
+  </style>
+
   </head>
+  
 
 <body>
 
-<!-- ********************** -->
 <!-- *** NAVIGATION BAR *** -->
-<!-- ********************** -->
 
-<nav class="navbar navbar-default" >
+<nav class="navbar navbar-default">
 <div class="container-fluid">
     
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,11 +54,11 @@
   <span class="icon-bar"></span>
   </button>
   <a class="navbar-brand" href="../../index.html">
-  User
+ User
   </a>
   </div>
 
-  <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   <ul class="nav navbar-nav">
 
     <!-- Home Button Dropdown Menu -->
@@ -59,13 +71,13 @@
     </li>
 
     <!-- Order Button Dropdown Menu -->
-    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-usd"> Order <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-        <li><a href="place_order.html"> Place Order </a></li>
-        <li><a href="on_order.html"> On Order </a></li>
-        <li><a href="order_history.html"> Order History </a></li>
-        <li><a href="budget_request.html"> Budget Request </a></li>
+        <li><a href="../order/place_order.html"> Place Order </a></li>
+        <li><a href="../order/on_order.html"> On Order </a></li>
+        <li><a href="../order/order_history.html"> Order History </a></li>
+        <li><a href="../order/budget_request.html"> Budget Request </a></li>
       </ul>
     </li>
 
@@ -87,7 +99,9 @@
         <li><a href="#">PDF: Lab Safety Manual</a></li>
       </ul>
     </li>
--->
+
+    -->
+
     <!-- Resources Button Dropdown Menu -->
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-book"> Resources <span class="caret"></span></span></a>
@@ -98,18 +112,20 @@
       </ul>
     </li>
 
-    <!-- Management Dropdown Menu -->
-    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+<!-- Management Dropdown Menu -->
+    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-briefcase"> Management <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-        <li><a href="../management/orders.html">Orders</a></li>
-        <li><a href="../management/check_in_out.html">Check In/Out</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="check_in_out.html">Check In/Out</a></li>
         <li><a href="#">Budgets</a></li>
         <li><a href="#">Benches</a></li>
         <li><a href="#">Lab Groups</a></li>
         <li><a href="#">Users</a></li>
         <li><a href="#">Equipment</a></li>
         <li><a href="#">Settings</a></li>
+
+
         <li>
       </ul>
     </li>
@@ -121,76 +137,54 @@
   <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-out"> Log Out</span></button>
   </div>
   </form>
+
+</div>
+</nav>
+  <div class="col-md-offset-1">
+  <h1>Users</h1>
   </div>
-  </nav>
+  <br>
+  <!-- *** Group page NAVIGATION **** -->
+  <div class="container">
+    <div class="orders_navigation_container">
+    <ul class="nav nav-pills nav-justified">
 
 
-  <!-- ***************************************** -->
-  <!-- ***  *** -->
-  <!-- ***************************************** -->
-
-  <section>
-  <div class = "container">
-  <div class="row">
-    <h1><span class="label label-default">Budget Request</span></h1>
-
-    <div class="col-md-6">
-      <div class="panel panel-success">
-        <div class="panel-heading">
-          <h3 class="panel-title">What is a Budget Request?</h3>
-        </div>
-          <div class="panel-body">
-            Panel content
-          </div>
-      </div> 
     </div>
+<br><br>
 
-    <div class="col-md-6">
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h3 class="panel-title">Budget Request</h3>
-      </div>
-      <div class="panel-body">
-        <form>
-          <div class="form-group">
-            <textarea class="form-control" id="budget_proposal" name="budget_proposal" placeholder="Write your proposal here..."></textarea>
-            <br>
-            <br>
-            <text>Enter Amount Below</text>
-            <br>
-            <br>
-            <text>$</text>
-            <input type="number" id="proposal_value" name="proposal_value" min="0.00" step="0.01" max="150.00" placeholder="0.00" />
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div>
-    </div>
-    </div>
+    <!-- *** TABLE **** -->
+    <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+      <th>Username</th>
+      <th>User Type</th>
+      <th>Real Name</th>
+      <th>Email</th>
+      <th>Raider ID</th>
+      <th>Certifications</th>
+      <th>Options</th>
+  
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>rioneal</td>
+        <td>Employee</td>
+        <td>Richard O'Neal</td>
+        <td>richard.oneal@ttu.edu</td>
+        <td>R1234567</td>
+        <td>Up To Date</td>
+        <td><input type="checkbox"></td>
+      </tr>
 
+    </tbody>
+    </table>
+  
+    </div>
+   <br>
+  <button class="btn btn-md btn-primary" type="submit">Remove Selected</span></button>
+</br>
   </div>
-  </div>
-  </section>
-
-
-<!-- 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li> 
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <p>Texas Tech University - ECE Department</p>
-        </div>
-      </div>
-    </div>
-  </footer>
--->
-</body>
-</html>
+  </body>
