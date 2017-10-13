@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>ECE Stockroom - Order History</title>
+    <title>ECE Stockroom - Management</title>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
@@ -17,20 +17,32 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <!-- CSS Style Sheet File for Entire Web Page -->
+    <link href="../../css/style.css" rel="stylesheet">
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- CSS Style Sheet File for Entire Web Page -->
-    <link href="../../css/style.css" rel="stylesheet">
+
+
+  <style>
+  .table-responsive{
+    background: #e8f9ea;
+  }
+
+  .orders_navigation_container{
+    background: #e8edf4;
+  }
+  </style>
+
   </head>
+  
 
 <body>
 
-<!-- ********************** -->
 <!-- *** NAVIGATION BAR *** -->
-<!-- ********************** -->
 
-<nav class="navbar navbar-default" >
+<nav class="navbar navbar-default">
 <div class="container-fluid">
     
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,11 +54,11 @@
   <span class="icon-bar"></span>
   </button>
   <a class="navbar-brand" href="../../index.html">
-  hello, Joaquin
+  User
   </a>
   </div>
 
-  <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   <ul class="nav navbar-nav">
 
     <!-- Home Button Dropdown Menu -->
@@ -59,13 +71,13 @@
     </li>
 
     <!-- Order Button Dropdown Menu -->
-    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-usd"> Order <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-        <li><a href="place_order.html"> Place Order </a></li>
-        <li><a href="on_order.html"> On Order </a></li>
-        <li><a href="order_history.html"> Order History </a></li>
-        <li><a href="budget_request.html"> Budget Request </a></li>
+        <li><a href="../order/place_order.html"> Place Order </a></li>
+        <li><a href="../order/on_order.html"> On Order </a></li>
+        <li><a href="../order/order_history.html"> Order History </a></li>
+        <li><a href="../order/budget_request.html"> Budget Request </a></li>
       </ul>
     </li>
 
@@ -73,12 +85,12 @@
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-wrench"> Equipment <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-        <li><a href="public/equipment/equipment.html">Individual</a></li>
+        <li><a href="#">Individual</a></li>
         <li><a href="#">Group</a></li>
       </ul>
     </li>
 
-    <!-- Lab Safety Button Dropdown Menu -->
+    <!-- Lab Safety Button Dropdown Menu 
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-certificate"> Lab Safety <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
@@ -88,21 +100,23 @@
       </ul>
     </li>
 
+    -->
+
     <!-- Resources Button Dropdown Menu -->
-    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-book"> Resources <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-       <li><a href="../resources/general.html">General</a></li>
-        <li><a href="../resources/Lab1.html">Lab I</a></li>
-        <li><a href="../resources/Lab3.html">Lab III</a></li>
+        <li><a href="general.html">General</a></li>
+        <li><a href="Lab1.html">Lab I</a></li>
+        <li><a href="Lab3.html">Lab III</a></li>
       </ul>
     </li>
 
-    <!-- Management Dropdown Menu -->
+<!-- Management Dropdown Menu -->
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-briefcase"> Management <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-       <li><a href="../management/orders.html">Orders</a></li>
+         <li><a href="../management/orders.html">Orders</a></li>
         <li><a href="../management/check_in_out.html">Check In/Out</a></li>
         <li><a href="../management/budget.html">Budgets</a></li>
         <li><a href="../management/benches.html">Benches</a></li>
@@ -110,6 +124,8 @@
         <li><a href="../management/users.html">Users</a></li>
         <li><a href="../management/equipment.html">Equipment</a></li>
         <li><a href="../management/Settings.html">Settings</a></li>
+
+
         <li>
       </ul>
     </li>
@@ -121,99 +137,59 @@
   <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-out"> Log Out</span></button>
   </div>
   </form>
+
+</div>
+</nav>
+  <div class="col-md-offset-1">
+  <h1>Lab I Resources and tools</h1>
   </div>
-  </nav>
+  <br>
+  <!-- *** resourceNAVIGATION **** -->
+  <div class="container">
+    <div class="orders_navigation_container">
+    <ul class="nav nav-pills nav-justified">
+    <li role="presentation" ><a href="general.html">General</span></a></li>
+    <li role="presentation" class="active"><a href="lab1.html">Lab I</span></a></li>
+    <li role="presentation"><a href="Lab3.html">Lab III</span></a></li>
 
+    </ul>
+    </div>
+<br><br>
 
-  <!-- ***************************************** -->
-  <!-- *** Table for Items on Order for User *** -->
-  <!-- ***************************************** -->
-
-  <section>
-  <div class = "container">
-  <div class="row">
-    <h1>Order History</h1>
-
-  <br><br>
-
-  </div>
-     <div class="table-responsive">
+    <!-- *** TABLE **** -->
+    <div class="table-responsive">
     <table class="table table-striped">
       <thead>
       <tr>
-      <th>Part Number</th>
+      <th>Name</th>
       <th>Description</th>
-      <th>Quantity</th>
-      <th>Unit Cost</th>
-      <th>Sub Total</th>
-      <th>Date Placed</th>
-      <th>Status</th>
-      <th>Select</th>
+      <th>Link</th>
+      
       </tr>
       </thead>
       <tbody>
       <tr>
-        <td>123</td>
-        <td>IR Sensor</td>
-        <td>3</td>
-        <td>5.00</td>
-        <td>15.00</td>
-        <td>4/20/17</td>
-        <td>Unverified</td>
-        <td><input type="checkbox"></td>
+        <td>Tutorial Videos by Daniel Ayala </td>
+        <td>Tutorials on Verilog, Basys2, and Basys3</td>
+        <td>Videos</td>
+      </tr>
+       <tr>
+        <td>Xilinx ISE</td>
+        <td>Program Verilog for an FPGA</td>
+        <td>Xilinx</td>
       </tr>
       <tr>
-        <td>456</td>
-        <td>Ultrasonic Sensor</td>
-        <td>3</td>
-        <td>5.00</td>
-        <td>15.00</td>
-        <td>4/20/17</td>
-        <td>Unverified</td>
-        <td><input type="checkbox"></td>
+        <td>Xilinx Vivado</td>
+        <td>Program Verilog for later generation FPGAs</td>
+        <td>Xilinx</td>
       </tr>
       <tr>
-        <td>789</td>
-        <td>Battery</td>
-        <td>3</td>
-        <td>5.00</td>
-        <td>15.00</td>
-        <td>4/20/17</td>
-        <td>Unverified</td>
-        <td><input type="checkbox"></td>
+        <td>Digilent Adept 2</td>
+        <td>Program Xilinx Verilog programs into Basys2</td>
+        <td>Digilent</td>
       </tr>
-	  
-  </div>
-  </div>
-  <br><br>
+
+
     </tbody>
-	
     </table>
-	 <br>
-  <button class="btn btn-md btn-primary" type="submit">Remove Selected</span></button>
-</br>
-  </div>
-  </section>
-
-
-<!-- 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li> 
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <p>Texas Tech University - ECE Department</p>
-        </div>
-      </div>
-    </div>
-  </footer>
--->
-</body>
-</html>
+  </body>
