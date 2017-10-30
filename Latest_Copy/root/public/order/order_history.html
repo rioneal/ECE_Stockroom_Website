@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>ECE Stockroom - Place Order</title>
+    <title>ECE Stockroom - Order History</title>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
@@ -23,9 +23,9 @@
     <!-- CSS Style Sheet File for Entire Web Page -->
     <link href="../../css/style.css" rel="stylesheet">
   </head>
-  
 
 <body>
+
 <!-- ********************** -->
 <!-- *** NAVIGATION BAR *** -->
 <!-- ********************** -->
@@ -50,7 +50,7 @@
   <ul class="nav navbar-nav">
 
     <!-- Home Button Dropdown Menu -->
-    <li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-home"> Home <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
         <li><a href="../../index.html"> Newsfeed </a></li>
@@ -73,12 +73,12 @@
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-wrench"> Equipment <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-        <li><a href="#">Individual</a></li>
+        <li><a href="public/equipment/equipment.html">Individual</a></li>
         <li><a href="#">Group</a></li>
       </ul>
     </li>
 
-    <!-- Lab Safety Button Dropdown Menu 
+    <!-- Lab Safety Button Dropdown Menu -->
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-certificate"> Lab Safety <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
@@ -87,13 +87,12 @@
         <li><a href="#">PDF: Lab Safety Manual</a></li>
       </ul>
     </li>
-    -->
 
     <!-- Resources Button Dropdown Menu -->
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-book"> Resources <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-        <li><a href="../resources/general.html">General</a></li>
+       <li><a href="../resources/general.html">General</a></li>
         <li><a href="../resources/Lab1.html">Lab I</a></li>
         <li><a href="../resources/Lab3.html">Lab III</a></li>
       </ul>
@@ -116,136 +115,30 @@
     </li>
 </ul>
 
-<!-- Login/ create account Submit Button -->
+<!-- Log Out Submit Button -->
   <form class="navbar-form navbar-right">
   <div class="form-group "> 
-  <li class="btn btn-default"><a href="#" class="button" data-toggle="button" role="button" aria-haspopup="true" aria-expanded="false">
-  <span class="glyphicon glyphicon-log-out"><a href="../login/login.html"> Login/ Create Account</span></button>
-  <!--<li><a href="orders.html">Orders</a></li>-->
+  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-out"> Log Out</span></button>
   </div>
   </form>
+  </div>
+  </nav>
    </a>
-</div>
-</nav>
-
-<!-- ************************************** -->
-<!-- *** PLACE ORDER & REMAINING BUDGET *** -->
-<!-- ************************************** -->
-
-<div class="container">
-  <div class="row">
-    <h1>Place Order</h1>
-  </div>
-
-  <div class="row">
-  <div class="col-sm-offset-5">
-  <h3>Remaining Budget</h3>
-  </div>
-  </div>
-
-  <div class="row">
-  <div id="budget" class="col-sm-offset-5">
-  <strong>$44.21</strong>
-  </div>
-  </div>
 
 
-  <br>
-  
-  <!-- ************************** -->
-  <!-- *** ORDERS NAVIGATION **** -->
-  <!-- ************************** -->
-  
-    <div class="orders_navigation_container">
-    <ul class="nav nav-pills nav-justified">
-    <li role="presentation" class="active"><a href="#">Parts</a></li>
-    <li role="presentation"><a href="#">Greenboard</a></li>
-    <li role="presentation"><a href="#">Bill of Materials</a></li>
-    </ul>
-    </div>
-  <br>
-  <br>
+  <!-- ***************************************** -->
+  <!-- *** Table for Items on Order for User *** -->
+  <!-- ***************************************** -->
 
-  <div class="container">
-  <div class="col-sm-offset-4 col-sm-4">
-  <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Choose Website
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Mouser</a></li>
-    <li><a href="#">Digikey</a></li>
-    <li><a href="#">Sparkfun</a></li>
-    <li><a href="#">Adafruit</a></li>
-    <li><a href="#">Jameco</a></li>
-    <li><a href="#">All Electronics</a></li>
-    <li><a href="#">Amazon</a></li>
-    <li><a href="#">Other</a></li>
-  </ul>
-
-  </div>
-  </div>
-  </div>
-  <br>
-
+  <section>
   <div class = "container">
-  <div class = "col-sm-offset-4 col-sm-4">
-  <div class="dropdown">
-  <button class = "btn btn-default dropdown-toggle" type = "button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Choose In-Stock Item
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><a href="#">Small Solderable Breadboard ($3)</a></li>
-    <li><a href="#">Medium Solderable Breadboard ($6)</a></li>
-    <li><a href="#">Large Solderable Breadboard ($9)</a></li>
-  </ul>  
-  </div>
+  <div class="row">
+    <h1>Order History</h1>
 
-  
- <!--MAKING A BUTTON FOR INSTOCK ITEMS SUCH AS SOLDERABLE BREADBOARDS
-
-  <div class = "container">
-  <div class = "col-sm-offset-4 col-sm-4">
-  <div class ="dropdown">
-  <button class = "btn btn-default dropdown-toggle" type = "button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Choose Item
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Small Solderable Breadboard ($3)</a></li>
-    <li><a href="#">Medium Solderable Breadboard ($6)</a></li>
-    <li><a href="#">Large Solderable Breadboard ($9)</a></li>
-  </ul>
-</div>
--->
-
-
-  <br>
-  Part Number
-  <input type="text" id="part_number" name="part_number" class="form-control" placeholder="Part Number" required autofocus>
-  
-  <br>
-  Description
-  <input type="text" id="description" name="description" class="form-control" placeholder="Description" required>
-
-  <br>
-  Quantity
-  <input type="text" id="quantity" name="quantity" class="form-control" placeholder="Quantity" required>
-
-  <br>
-  <button class="btn btn-md btn-primary" type="submit"><span class="glyphicon glyphicon-plus"> Add </span></button>
-
-  </div>
-  </div>
   <br><br>
 
-    <!-- ************** -->
-    <!-- *** TABLE **** -->
-    <!-- ************** -->
-
-    <div class="table-responsive">
+  </div>
+     <div class="table-responsive">
     <table class="table table-striped">
       <thead>
       <tr>
@@ -290,13 +183,38 @@
         <td>Unverified</td>
         <td><input type="checkbox"></td>
       </tr>
+	  
+  </div>
+  </div>
+  <br><br>
     </tbody>
+	
     </table>
 	 <br>
   <button class="btn btn-md btn-primary" type="submit">Remove Selected</span></button>
 </br>
-    </div>
   </div>
-  <br>
-  <br>
-  </body>
+  </section>
+
+
+<!-- 
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li> 
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <p>Texas Tech University - ECE Department</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>ECE Stockroom - Management</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  
+
+<body>
+
+<!-- *** NAVIGATION BAR *** -->
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+    
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  <span class="sr-only">Toggle navigation</span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+User
+  </a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav">
+
+    <!-- Home Button Dropdown Menu -->
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-home"> Home <span class="caret"></span></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#"> Newsfeed </a></li>
+        <li><a href="#"> Account Settings </a></li>
+      </ul>
+    </li>
+        <!-- Order Button Dropdown Menu -->
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-usd"> Order <span class="caret"></span></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="../order/place_order.html"> Place Order </a></li>
+        <li><a href="../order/on_order.html"> On Order </a></li>
+        <li><a href="../order/order_history.html"> Order History </a></li>
+        <li><a href="../order/budget_request.html"> Budget Request </a></li>
+      </ul>
+    </li>
+
+    <!-- Equipment Button Dropdown Menu -->
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-wrench"> Equipment <span class="caret"></span></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Individual</a></li>
+        <li><a href="#">Group</a></li>
+      </ul>
+    </li>
+
+    <!-- Lab Safety Button Dropdown Menu
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-certificate"> Lab Safety <span class="caret"></span></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">ECE Lab Safety Quiz</a></li>
+        <li><a href="#">Main Lab Safety Videos</a></li>
+        <li><a href="#">PDF: Lab Safety Manual</a></li>
+      </ul>
+    </li>-->
+
+    <!-- Resources Button Dropdown Menu -->
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-book"> Resources <span class="caret"></span></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="../resources/general.html">General</a></li>
+        <li><a href="../resources/Lab1.html">Lab I</a></li>
+        <li><a href="../resources/Lab3.html">Lab III</a></li>
+      </ul>
+    </li>
+
+<!-- Management Dropdown Menu -->
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-briefcase"> Management <span class="caret"></span></span></a>
+      <ul class="dropdown-menu">
+		 <li><a href="orders.html">Orders</a></li>
+        <li><a href="check_in_out.html">Check In/Out</a></li>
+        <li><a href="budget.html">Budgets</a></li>
+        <li><a href="benches.html">Benches</a></li>
+        <li><a href="lab_groups.html">Lab Groups</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><a href="equipment.html">Equipment</a></li>
+        <li><a href="Settings.html">Settings</a></li>
+
+
+        <li>
+      </ul>
+    </li>
+</ul>
+
+<!-- Login/ create account Submit Button -->
+  <form class="navbar-form navbar-right">
+  <div class="form-group "> 
+  <li class="btn btn-default"><a href="#" class="button" data-toggle="button" role="button" aria-haspopup="true" aria-expanded="false">
+  <span class="glyphicon glyphicon-log-out"><a href="../login/login.html"> Login/ Create Account</span></button>
+  <!--<li><a href="orders.html">Orders</a></li>-->
+  </div>
+  </form>
+ </a>
+</div>
+</nav>
+
+  <div class="col-md-offset-1">
+  <h2>Check In/Out</h2>
+  </div>
+
+ <div class="col-sm-offset-4 col-sm-4">
+ <form class="form-signin" method="post">
+      
+      <br>
+      <input type="text" id="r_number" class="form-control" placeholder="R Number" required autofocus>
+      <br>
+      <button class="btn btn-lg btn-primary" type="submit">Group</button>
+
+      <button class="btn btn-lg btn-success" type="submit">Individual</button>
+      </form>
+  </div>
+  </body>

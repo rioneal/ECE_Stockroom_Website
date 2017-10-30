@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>ECE Stockroom - Place Order</title>
+    <title>ECE Stockroom - Management</title>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
@@ -17,20 +17,32 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <!-- CSS Style Sheet File for Entire Web Page -->
+    <link href="../../css/style.css" rel="stylesheet">
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- CSS Style Sheet File for Entire Web Page -->
-    <link href="../../css/style.css" rel="stylesheet">
+
+
+  <style>
+  .table-responsive{
+    background: #e8f9ea;
+  }
+
+  .orders_navigation_container{
+    background: #e8edf4;
+  }
+  </style>
+
   </head>
   
 
 <body>
-<!-- ********************** -->
-<!-- *** NAVIGATION BAR *** -->
-<!-- ********************** -->
 
-<nav class="navbar navbar-default" >
+<!-- *** NAVIGATION BAR *** -->
+
+<nav class="navbar navbar-default">
 <div class="container-fluid">
     
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -46,11 +58,11 @@
   </a>
   </div>
 
-  <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   <ul class="nav navbar-nav">
 
     <!-- Home Button Dropdown Menu -->
-    <li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-home"> Home <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
         <li><a href="../../index.html"> Newsfeed </a></li>
@@ -59,13 +71,13 @@
     </li>
 
     <!-- Order Button Dropdown Menu -->
-    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-usd"> Order <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-        <li><a href="place_order.html"> Place Order </a></li>
-        <li><a href="on_order.html"> On Order </a></li>
-        <li><a href="order_history.html"> Order History </a></li>
-        <li><a href="budget_request.html"> Budget Request </a></li>
+        <li><a href="../order/place_order.html"> Place Order </a></li>
+        <li><a href="../order/on_order.html"> On Order </a></li>
+        <li><a href="../order/order_history.html"> Order History </a></li>
+        <li><a href="../order/budget_request.html"> Budget Request </a></li>
       </ul>
     </li>
 
@@ -87,6 +99,7 @@
         <li><a href="#">PDF: Lab Safety Manual</a></li>
       </ul>
     </li>
+
     -->
 
     <!-- Resources Button Dropdown Menu -->
@@ -99,156 +112,64 @@
       </ul>
     </li>
 
-    <!-- Management Dropdown Menu -->
-    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+<!-- Management Dropdown Menu -->
+    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-briefcase"> Management <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-       <li><a href="../management/orders.html">Orders</a></li>
-        <li><a href="../management/check_in_out.html">Check In/Out</a></li>
-        <li><a href="../management/budget.html">Budgets</a></li>
-        <li><a href="../management/benches.html">Benches</a></li>
-        <li><a href="../management/lab_groups.html">Lab Groups</a></li>
-        <li><a href="../management/users.html">Users</a></li>
-        <li><a href="../management/equipment.html">Equipment</a></li>
-        <li><a href="../management/Settings.html">Settings</a></li>
+         <li><a href="orders.html">Orders</a></li>
+        <li><a href="check_in_out.html">Check In/Out</a></li>
+        <li><a href="budget.html">Budgets</a></li>
+        <li><a href="benches.html">Benches</a></li>
+        <li><a href="lab_groups.html">Lab Groups</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><a href="equipment.html">Equipment</a></li>
+        <li><a href="Settings.html">Settings</a></li>
+
+
         <li>
       </ul>
     </li>
 </ul>
 
-<!-- Login/ create account Submit Button -->
+<!-- Log Out Submit Button -->
   <form class="navbar-form navbar-right">
   <div class="form-group "> 
-  <li class="btn btn-default"><a href="#" class="button" data-toggle="button" role="button" aria-haspopup="true" aria-expanded="false">
+  <li class="btn btn-default"><a href="#" class="btn" data-toggle="btn" role="btn" aria-haspopup="true" aria-expanded="false">
   <span class="glyphicon glyphicon-log-out"><a href="../login/login.html"> Login/ Create Account</span></button>
   <!--<li><a href="orders.html">Orders</a></li>-->
   </div>
   </form>
    </a>
+
+ <!-- <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-out"> Log Out</span></button>-->
+  </form>
+
 </div>
 </nav>
-
-<!-- ************************************** -->
-<!-- *** PLACE ORDER & REMAINING BUDGET *** -->
-<!-- ************************************** -->
-
-<div class="container">
-  <div class="row">
-    <h1>Place Order</h1>
+  <div class="col-md-offset-1">
+  <h1>Orders</h1>
   </div>
-
-  <div class="row">
-  <div class="col-sm-offset-5">
-  <h3>Remaining Budget</h3>
-  </div>
-  </div>
-
-  <div class="row">
-  <div id="budget" class="col-sm-offset-5">
-  <strong>$44.21</strong>
-  </div>
-  </div>
-
-
   <br>
-  
-  <!-- ************************** -->
   <!-- *** ORDERS NAVIGATION **** -->
-  <!-- ************************** -->
-  
+  <div class="container">
     <div class="orders_navigation_container">
     <ul class="nav nav-pills nav-justified">
-    <li role="presentation" class="active"><a href="#">Parts</a></li>
-    <li role="presentation"><a href="#">Greenboard</a></li>
-    <li role="presentation"><a href="#">Bill of Materials</a></li>
+    <li role="presentation" class="active"><a href="#">Unprocessed Orders<span class="badge">3</span></a></li>
+    <li role="presentation"><a href="#">On Their Way<span class="badge">4</span></a></li>
+    <li role="presentation"><a href="#">Order Issues<span class="badge">0</span></a></li>
+    <li role="presentation"><a href="#">Stock<span class="badge">0</span></a></li>
+    <li role="presentation"><a href="#">Greenboards<span class="badge">1</span></a></li>
+    <li role="presentation"><a href="#">Completed<span class="badge">7</span></a></li>
     </ul>
     </div>
-  <br>
-  <br>
+<br><br>
 
-  <div class="container">
-  <div class="col-sm-offset-4 col-sm-4">
-  <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Choose Website
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Mouser</a></li>
-    <li><a href="#">Digikey</a></li>
-    <li><a href="#">Sparkfun</a></li>
-    <li><a href="#">Adafruit</a></li>
-    <li><a href="#">Jameco</a></li>
-    <li><a href="#">All Electronics</a></li>
-    <li><a href="#">Amazon</a></li>
-    <li><a href="#">Other</a></li>
-  </ul>
-
-  </div>
-  </div>
-  </div>
-  <br>
-
-  <div class = "container">
-  <div class = "col-sm-offset-4 col-sm-4">
-  <div class="dropdown">
-  <button class = "btn btn-default dropdown-toggle" type = "button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Choose In-Stock Item
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><a href="#">Small Solderable Breadboard ($3)</a></li>
-    <li><a href="#">Medium Solderable Breadboard ($6)</a></li>
-    <li><a href="#">Large Solderable Breadboard ($9)</a></li>
-  </ul>  
-  </div>
-
-  
- <!--MAKING A BUTTON FOR INSTOCK ITEMS SUCH AS SOLDERABLE BREADBOARDS
-
-  <div class = "container">
-  <div class = "col-sm-offset-4 col-sm-4">
-  <div class ="dropdown">
-  <button class = "btn btn-default dropdown-toggle" type = "button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Choose Item
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Small Solderable Breadboard ($3)</a></li>
-    <li><a href="#">Medium Solderable Breadboard ($6)</a></li>
-    <li><a href="#">Large Solderable Breadboard ($9)</a></li>
-  </ul>
-</div>
--->
-
-
-  <br>
-  Part Number
-  <input type="text" id="part_number" name="part_number" class="form-control" placeholder="Part Number" required autofocus>
-  
-  <br>
-  Description
-  <input type="text" id="description" name="description" class="form-control" placeholder="Description" required>
-
-  <br>
-  Quantity
-  <input type="text" id="quantity" name="quantity" class="form-control" placeholder="Quantity" required>
-
-  <br>
-  <button class="btn btn-md btn-primary" type="submit"><span class="glyphicon glyphicon-plus"> Add </span></button>
-
-  </div>
-  </div>
-  <br><br>
-
-    <!-- ************** -->
     <!-- *** TABLE **** -->
-    <!-- ************** -->
-
     <div class="table-responsive">
     <table class="table table-striped">
       <thead>
       <tr>
+      <th>User</th>
       <th>Part Number</th>
       <th>Description</th>
       <th>Quantity</th>
@@ -261,6 +182,7 @@
       </thead>
       <tbody>
       <tr>
+        <td>Joaquin Rosendo</td>
         <td>123</td>
         <td>IR Sensor</td>
         <td>3</td>
@@ -271,6 +193,7 @@
         <td><input type="checkbox"></td>
       </tr>
       <tr>
+        <td>Camron Capps</td>
         <td>456</td>
         <td>Ultrasonic Sensor</td>
         <td>3</td>
@@ -281,6 +204,7 @@
         <td><input type="checkbox"></td>
       </tr>
       <tr>
+        <td>Richard O'Neal</td>
         <td>789</td>
         <td>Battery</td>
         <td>3</td>
@@ -292,11 +216,10 @@
       </tr>
     </tbody>
     </table>
+	
+    </div>
 	 <br>
   <button class="btn btn-md btn-primary" type="submit">Remove Selected</span></button>
 </br>
-    </div>
   </div>
-  <br>
-  <br>
   </body>
