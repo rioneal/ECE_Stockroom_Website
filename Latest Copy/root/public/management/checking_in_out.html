@@ -23,15 +23,58 @@
     <!-- CSS Style Sheet File for Entire Web Page -->
     <link href="../../css/style.css" rel="stylesheet">
   </head>
-  
+
+  <style type="text/css">
+  .navbarimg{
+    background-image: url('../images/tech.png');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: left;-->
+  }
+
+    body {
+      background-color:;
+     
+      background-size: 1365px 853px;
+          background-repeat: no-repeat; 
+          background-position: left;
+          ; 
+    }
+
+    .colordivs {
+      background-color:  ;
+     
+    }
+    .container
+     {
+      background-color: ;
+    }
+    .table-responsive{
+    background: #e8f9ea;
+  }
+ .navbar-default {
+  background-color: ;
+  color: white;
+  background: ;
+  background-image: none;
+  background-repeat: no-repeat;
+ }
+
+
+  </style>
 
 <body>
+<!--div {
+    background: url(img_flwr.gif);
+    background-size: 80px 60px;
+    background-repeat: no-repeat;
+}-->
 <!-- ********************** -->
 <!-- *** NAVIGATION BAR *** -->
 <!-- ********************** -->
 
 <nav class="navbar navbar-default" >
-<div class="container-fluid">
+<div class="navbarimg"  >
     
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -42,7 +85,8 @@
   <span class="icon-bar"></span>
   </button>
   <a class="navbar-brand" href="../../index.html">
-  User
+     &nbsp &nbsp &nbsp &nbsp &nbsp
+     
   </a>
   </div>
 
@@ -59,13 +103,13 @@
     </li>
 
     <!-- Order Button Dropdown Menu -->
-    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-usd"> Order <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
-        <li><a href="place_order.html"> Place Order </a></li>
-        <li><a href="on_order.html"> On Order </a></li>
-        <li><a href="order_history.html"> Order History </a></li>
-        <li><a href="budget_request.html"> Budget Request </a></li>
+        <li><a href="../order/place_order.html"> Place Order </a></li>
+        <li><a href="../order/on_order.html"> On Order </a></li>
+        <li><a href="../order/order_history.html"> Order History </a></li>
+        <li><a href="../order/budget_request.html"> Budget Request </a></li>
       </ul>
     </li>
 
@@ -100,7 +144,7 @@
     </li>
 
     <!-- Management Dropdown Menu -->
-    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-briefcase"> Management <span class="caret"></span></span></a>
       <ul class="dropdown-menu">
        <li><a href="../management/orders.html">Orders</a></li>
@@ -130,14 +174,14 @@
 
 <!-- ************************************** -->
 
-<div class="container">
+<div class="container" >
   <div class="row">
     <h1>Check-in/Check-out</h1>
   </div>
 
   <div class="row">
   <div class="col-sm-offset-5">
-  <h3>NAME</h3>
+  <h3>FULL NAME</h3>
   </div>
   </div>
 
@@ -158,13 +202,14 @@
      <!-- <ul class="nav nav-pills nav-justified">
     <!--  <li role="presentation" class="active"><a href="#"></a></li>
     <!--<li role="presentation"><a href="#">Check-in</a></li>-->
-   <!-- <li role="presentation"><a href="#">Bill of Materials</a></li>-->
+   
     </ul>
     </div>
   <br>
   <br>
 
   <div class="container">
+    
   <div class="col-sm-offset-4 col-sm-4">
   <div class="dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -177,21 +222,21 @@
   </ul>
   </div>
 
-  <br>
+  <br/>
   Equipment Name
   <input type="text" id="part_number" name="part_number" class="form-control" placeholder="Equipment Name" required autofocus>
   
-  <br>
+  <br/>
   Equipment ID
   <input type="text" id="description" name="description" class="form-control" placeholder="Equipment ID" required>
 
-  <br>
+  <br/>
   Return Date
   <input type="text" id="quantity" name="quantity" class="form-control" placeholder="12/15/2017" required>
-  <br>
+  <br/>
 
   <button class="btn btn-md btn-primary" type="submit"><span class="glyphicon glyphicon-plus"> Check-Out </span></button>
-
+</div>
   </div>
   </div>
   <br><br>
@@ -214,6 +259,7 @@
       </tr>
       </thead>
       <tbody>
+        <!-- DATABASE WILL POPULATE TABLE -->
       <tr>
         <td>Ricky Ricardo</td>
         <td>Rover Chasis</td>
